@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMaster Arena - Ultimate Programming Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="loading-spinner"></div>
+                <h2>CodeMaster Arena</h2>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p>Loading amazing questions...</p>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+        <div class="floating-shape shape-5"></div>
+    </div>
+
+    <!-- Homepage - Languages Menu -->
+    <div id="homepage" class="page active">
+        <header class="header">
+            <h1 class="main-title">🏆 CodeMaster Arena</h1>
+            <p class="subtitle">Master the art of programming across multiple languages and difficulty levels</p>
+            <div class="difficulty-legend">
+                <span class="legend-item beginner">🟢 Beginner</span>
+                <span class="legend-item intermediate">🟡 Intermediate</span>
+                <span class="legend-item advanced">🔴 Advanced</span>
+            </div>
+        </header>
+
+        <div class="categories-section">
+            <div class="category-header">
+                <h2>🌐 Web Technologies</h2>
+                <p>Frontend and backend web development</p>
+            </div>
+            <div class="languages-grid web-languages">
+            <div class="language-card" data-language="html">
+                <div class="card-logo">
+                    <i class="devicon-html5-plain colored"></i>
+                </div>
+                <h3>HTML</h3>
+                <p>The structure of the web</p>
+                <div class="card-stats">
+                    <span class="difficulty beginner">🟢 Beginner</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>            <div class="language-card" data-language="css">                <div class="card-logo">
+                    <i class="devicon-css3-plain-wordmark colored"></i>
+                </div>
+                <h3>CSS</h3>
+                <p>Styling and design language</p>
+                <div class="card-stats">
+                    <span class="difficulty beginner">🟢 Beginner</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="javascript">
+                <div class="card-logo">
+                    <i class="devicon-javascript-plain colored"></i>
+                </div>
+                <h3>JavaScript</h3>
+                <p>Master the language of the web</p>
+                <div class="card-stats">
+                    <span class="difficulty beginner">🟢 Beginner</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="react">
+                <div class="card-logo">
+                    <i class="devicon-react-original colored"></i>
+                </div>
+                <h3>React</h3>
+                <p>Modern frontend library</p>
+                <div class="card-stats">
+                    <span class="difficulty intermediate">🟡 Intermediate</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="nodejs">
+                <div class="card-logo">
+                    <i class="devicon-nodejs-plain colored"></i>
+                </div>
+                <h3>Node.js</h3>
+                <p>Server-side JavaScript runtime</p>
+                <div class="card-stats">
+                    <span class="difficulty intermediate">🟡 Intermediate</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="php">
+                <div class="card-logo">
+                    <i class="devicon-php-plain colored"></i>
+                </div>
+                <h3>PHP</h3>
+                <p>Server-side web development</p>
+                <div class="card-stats">
+                    <span class="difficulty beginner">🟢 Beginner</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-header">
+            <h2>💻 General Purpose Languages</h2>
+            <p>Versatile programming languages for various applications</p>
+        </div>
+        <div class="languages-grid general-languages">
+            <div class="language-card" data-language="python">
+                <div class="card-logo">
+                    <i class="devicon-python-plain colored"></i>
+                </div>
+                <h3>Python</h3>
+                <p>The versatile programming language</p>
+                <div class="card-stats">
+                    <span class="difficulty beginner">🟢 Beginner</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="go">
+                <div class="card-logo">
+                    <i class="devicon-go-original-wordmark colored"></i>
+                </div>
+                <h3>Go</h3>
+                <p>Google's efficient language</p>
+                <div class="card-stats">
+                    <span class="difficulty intermediate">🟡 Intermediate</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="rust">
+                <div class="card-logo">
+                    <i class="devicon-rust-plain colored"></i>
+                </div>
+                <h3>Rust</h3>
+                <p>Memory-safe systems programming</p>
+                <div class="card-stats">
+                    <span class="difficulty advanced">🔴 Advanced</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-header">
+            <h2>🏢 Enterprise & Systems</h2>
+            <p>Languages for enterprise applications and system programming</p>
+        </div>
+        <div class="languages-grid enterprise-languages">
+            <div class="language-card" data-language="java">
+                <div class="card-logo">
+                    <i class="devicon-java-plain colored"></i>
+                </div>
+                <h3>Java</h3>
+                <p>Enterprise-grade programming</p>
+                <div class="card-stats">
+                    <span class="difficulty intermediate">🟡 Intermediate</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="cpp">
+                <div class="card-logo">
+                    <i class="devicon-cplusplus-plain colored"></i>
+                </div>
+                <h3>C++</h3>
+                <p>System programming powerhouse</p>
+                <div class="card-stats">
+                    <span class="difficulty advanced">🔴 Advanced</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="csharp">
+                <div class="card-logo">
+                    <i class="devicon-csharp-plain colored"></i>
+                </div>
+                <h3>C#</h3>
+                <p>Microsoft's modern language</p>
+                <div class="card-stats">
+                    <span class="difficulty intermediate">🟡 Intermediate</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="php">
+                <div class="card-logo">
+                    <i class="devicon-php-plain colored"></i>
+                </div>
+                <h3>PHP</h3>
+                <p>Server-side web development</p>
+                <div class="card-stats">
+                    <span class="difficulty beginner">🟢 Beginner</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="react">
+                <div class="card-logo">
+                    <i class="devicon-react-original colored"></i>
+                </div>
+                <h3>React</h3>
+                <p>Modern frontend library</p>
+                <div class="card-stats">
+                    <span class="difficulty intermediate">🟡 Intermediate</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="nodejs">
+                <div class="card-logo">
+                    <i class="devicon-nodejs-plain colored"></i>
+                </div>
+                <h3>Node.js</h3>
+                <p>Server-side JavaScript runtime</p>
+                <div class="card-stats">
+                    <span class="difficulty intermediate">🟡 Intermediate</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="go">
+                <div class="card-logo">
+                    <i class="devicon-go-original-wordmark colored"></i>
+                </div>
+                <h3>Go</h3>
+                <p>Google's efficient language</p>
+                <div class="card-stats">
+                    <span class="difficulty intermediate">🟡 Intermediate</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="rust">
+                <div class="card-logo">
+                    <i class="devicon-rust-plain colored"></i>
+                </div>
+                <h3>Rust</h3>
+                <p>Memory-safe systems programming</p>
+                <div class="card-stats">
+                    <span class="difficulty advanced">🔴 Advanced</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-header">
+            <h2>📱 Mobile Development</h2>
+            <p>Languages and frameworks for mobile app development</p>
+        </div>
+        <div class="languages-grid mobile-languages">
+            <div class="language-card" data-language="swift">
+                <div class="card-logo">
+                    <i class="devicon-swift-plain colored"></i>
+                </div>
+                <h3>Swift</h3>
+                <p>Apple's modern programming language</p>
+                <div class="card-stats">
+                    <span class="difficulty intermediate">🟡 Intermediate</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="kotlin">
+                <div class="card-logo">
+                    <i class="devicon-kotlin-plain colored"></i>
+                </div>
+                <h3>Kotlin</h3>
+                <p>Modern Android development</p>
+                <div class="card-stats">
+                    <span class="difficulty intermediate">🟡 Intermediate</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="dart">
+                <div class="card-logo">
+                    <i class="devicon-dart-plain colored"></i>
+                </div>
+                <h3>Dart</h3>
+                <p>Google's client-optimized language</p>
+                <div class="card-stats">
+                    <span class="difficulty intermediate">🟡 Intermediate</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+
+            <div class="language-card" data-language="flutter">
+                <div class="card-logo">
+                    <i class="devicon-flutter-plain colored"></i>
+                </div>
+                <h3>Flutter</h3>
+                <p>Cross-platform UI framework</p>
+                <div class="card-stats">
+                    <span class="difficulty intermediate">🟡 Intermediate</span>
+                    <span class="questions">10 Questions</span>
+                </div>
+                <div class="card-overlay">
+                    <span>Start Quiz</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quiz-page" class="page">
+        <header class="quiz-header">
+            <button id="back-to-home" class="back-btn">← Back to Languages</button>
+            <div class="quiz-title-container">
+                <div id="quiz-logo" class="quiz-logo"></div>
+                <h2 id="quiz-title">JavaScript Quiz</h2>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <span id="question-counter">1 / 10</span>
+            </div>
+        </header>
+
+        <main class="quiz-container">
+            <div class="question-card">
+                <div class="question-header">
+                    <h3 id="question-text">Loading question...</h3>
+                    <div id="code-preview" class="code-preview" style="display: none;">
+                        <div class="code-header">
+                            <span class="code-lang">Code Example</span>
+                            <div class="code-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <pre id="code-content"></pre>
+                    </div>
+                </div>
+                <div id="options-container" class="options-container">
+                    <!-- Options will be dynamically generated -->
+                </div>
+                <button id="next-question" class="next-btn" disabled>Next Question</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Results Page -->
+    <div id="results-page" class="page">
+        <div class="results-container">
+            <div class="results-card">
+                <div class="score-circle">
+                    <div class="score-text">
+                        <span id="final-score">0</span>
+                        <span class="score-total">/ 10</span>
+                    </div>
+                </div>
+                <h2 id="results-title">Quiz Complete!</h2>
+                <p id="results-message">Great job on completing the quiz!</p>
+                <div class="results-actions">
+                    <button id="try-again" class="action-btn primary">Try Again</button>
+                    <button id="back-to-languages" class="action-btn secondary">Back to Languages</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
