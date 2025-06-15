@@ -1,4 +1,23 @@
 // Quiz Questions Database
+const languageNames = {
+    javascript: 'JavaScript',
+    python: 'Python',
+    java: 'Java',
+    cpp: 'C++',
+    csharp: 'C#',
+    php: 'PHP',
+    go: 'Go',
+    rust: 'Rust',
+    swift: 'Swift',
+    kotlin: 'Kotlin',
+    dart: 'Dart',
+    flutter: 'Flutter',
+    react: 'React',
+    nodejs: 'Node.js',
+    html: 'HTML',
+    css: 'CSS'
+};
+
 const quizQuestions = {
     javascript: [
         {
@@ -1303,24 +1322,4 @@ final name4 = 'Alice';    // Immutable`
             correct: 3
         }
     ]
-};
-
-// Language display names
-const languageNames = {
-    javascript: "JavaScript",
-    python: "Python",
-    java: "Java",
-    cpp: "C++",
-    csharp: "C#",
-    php: "PHP",
-    react: "React",
-    nodejs: "Node.js",
-    go: "Go",
-    rust: "Rust",
-    html: "HTML",
-    css: "CSS",
-    swift: "Swift",
-    kotlin: "Kotlin",
-    dart: "Dart",
-    flutter: "Flutter"
 };
