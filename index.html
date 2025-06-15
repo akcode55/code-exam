@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeMaster Arena - Ultimate Programming Challenge</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="statistics.css">
+    <link rel="stylesheet" href="responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <!-- Loading Screen -->
@@ -35,6 +39,9 @@
     <!-- Homepage - Languages Menu -->
     <div id="homepage" class="page active">
         <header class="header">
+            <div class="header-nav">
+                <button id="stats-btn" class="nav-btn">📊 Statistics</button>
+            </div>
             <h1 class="main-title">🏆 CodeMaster Arena</h1>
             <p class="subtitle">Master the art of programming across multiple languages and difficulty levels</p>
             <div class="difficulty-legend">
@@ -379,6 +386,26 @@
                     <span>Start Quiz</span>
                 </div>
             </div>
+        
+        <!-- Developer Contact Section -->
+        <footer class="developer-section">
+            <div class="developer-container">
+                <div class="developer-info">
+                    <h3>👨‍💻 Developer</h3>
+                    <p>Built with eng( Ahmed Kandiel ❤️ )</p>
+                </div>
+                <div class="contact-links">
+                    <a href="https://github.com/akcode55?tab=repositories" target="_blank" class="contact-btn">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                    <a href="https://wa.me/201208462622" target="_blank" class="contact-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </footer>
         </div>
         </div>
     </div>
@@ -439,6 +466,68 @@
                     <button id="try-again" class="action-btn primary">Try Again</button>
                     <button id="back-to-languages" class="action-btn secondary">Back to Languages</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Page -->
+    <div id="statistics-page" class="page">
+        <header class="stats-header">
+            <button id="back-to-home-from-stats" class="back-btn">← Back</button>
+            <h2 class="stats-title">📊 Dashboard</h2>
+        </header>
+        
+        <div class="stats-container">
+            <div class="stats-grid">
+                <!-- Overall Stats -->
+                <div class="stats-card overall-stats">
+                    <h3>Performance</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Quizzes</span>
+                        <span id="total-quizzes" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Average</span>
+                        <span id="average-score" class="stat-value">0%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Best</span>
+                        <span id="best-score" class="stat-value">0%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Questions</span>
+                        <span id="total-questions" class="stat-value">0</span>
+                    </div>
+                </div>
+
+                <!-- Language Stats -->
+                <div class="stats-card language-stats">
+                    <h3>Languages</h3>
+                    <div id="language-stats-list">
+                        <!-- Language stats will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Recent Results -->
+                <div class="stats-card recent-results">
+                    <h3>Recent</h3>
+                    <div id="recent-results-list">
+                        <!-- Recent results will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Achievement Badges -->
+                <div class="stats-card achievements">
+                    <h3>Achievements</h3>
+                    <div id="achievements-list" class="achievements-grid">
+                        <!-- Achievements will be populated here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-actions">
+                <button id="clear-stats" class="action-btn danger">🗑️ Clear</button>
+                <button id="export-stats" class="action-btn secondary">📤 Export</button>
             </div>
         </div>
     </div>
