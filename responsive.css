@@ -1,0 +1,361 @@
+/* Enhanced Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+    
+    .language-card, .stats-card, .results-card, .question-card {
+        background: rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    .language-card:hover, .stats-card:hover {
+        background: rgba(0, 0, 0, 0.6);
+        border-color: rgba(255, 255, 255, 0.25);
+    }
+    
+    .option {
+        background: rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.15);
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .option:hover {
+        background: rgba(0, 0, 0, 0.5);
+        border-color: rgba(138, 43, 226, 0.6);
+    }
+    
+    .option.correct {
+        background: rgba(34, 197, 94, 0.2);
+        border-color: rgba(34, 197, 94, 0.6);
+        color: rgba(34, 197, 94, 1);
+    }
+    
+    .option.incorrect {
+        background: rgba(239, 68, 68, 0.2);
+        border-color: rgba(239, 68, 68, 0.6);
+        color: rgba(239, 68, 68, 1);
+    }
+    
+    .nav-btn, .action-btn, .back-btn {
+        background: rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .nav-btn:hover, .action-btn:hover, .back-btn:hover {
+        background: rgba(0, 0, 0, 0.6);
+        border-color: rgba(138, 43, 226, 0.6);
+        color: white;
+    }
+    
+    .code-preview {
+        background: rgba(0, 0, 0, 0.6);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .loading-screen {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+}
+
+/* Enhanced Button Contrast for Better Accessibility */
+.action-btn, .nav-btn, .back-btn, .next-btn {
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-btn::before, .nav-btn::before, .back-btn::before, .next-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.action-btn:hover::before, .nav-btn:hover::before, .back-btn:hover::before, .next-btn:hover::before {
+    left: 100%;
+}
+
+/* Improved Focus States for Accessibility */
+.language-card:focus, .option:focus, .action-btn:focus, .nav-btn:focus, .back-btn:focus, .next-btn:focus {
+    outline: 3px solid rgba(138, 43, 226, 0.8);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px rgba(138, 43, 226, 0.2);
+}
+
+/* Enhanced Mobile Touch Targets */
+@media (max-width: 768px) {
+    .language-card, .option, .action-btn, .nav-btn, .back-btn, .next-btn {
+        min-height: 48px;
+        touch-action: manipulation;
+    }
+    
+    .language-card {
+        padding: 30px 20px;
+        margin-bottom: 15px;
+    }
+    
+    .option {
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    
+    .action-btn, .nav-btn, .back-btn, .next-btn {
+        padding: 14px 24px;
+        font-size: 1rem;
+        min-width: 120px;
+    }
+    
+    /* Improved spacing for mobile */
+    .question-card {
+        padding: 25px 20px;
+        margin: 15px;
+    }
+    
+    .results-card {
+        padding: 35px 25px;
+        margin: 15px;
+    }
+    
+    /* Better text sizing for mobile */
+    .main-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    
+    .category-header h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .quiz-title {
+        font-size: 1.4rem;
+    }
+    
+    #question-text {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+}
+
+/* Ultra-small screens (phones in portrait) */
+@media (max-width: 480px) {
+    .page {
+        padding: 10px;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .difficulty-legend {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .legend-item {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .category-header {
+        margin: 30px 0 20px;
+    }
+    
+    .category-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .category-header p {
+        font-size: 0.9rem;
+    }
+    
+    .languages-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .language-card {
+        padding: 20px 15px;
+    }
+    
+    .card-logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+    
+    .language-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .language-card p {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+    
+    .quiz-header {
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .quiz-title-container {
+        order: -1;
+    }
+    
+    .progress-container {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .question-card {
+        padding: 20px 15px;
+        margin: 10px;
+    }
+    
+    #question-text {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+    
+    .option {
+        padding: 15px;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+    
+    .results-card {
+        padding: 25px 15px;
+        margin: 10px;
+    }
+    
+    .score-circle {
+        width: 100px;
+        height: 100px;
+        border-width: 6px;
+        margin-bottom: 20px;
+    }
+    
+    #final-score {
+        font-size: 2rem;
+    }
+    
+    .score-total {
+        font-size: 1rem;
+    }
+    
+    #results-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    #results-message {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .results-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .action-btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .language-card, .option, .stats-card, .results-card, .question-card {
+        border-width: 3px;
+        border-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .language-card:hover, .option:hover, .stats-card:hover {
+        border-color: rgba(138, 43, 226, 1);
+        background: rgba(138, 43, 226, 0.2);
+    }
+    
+    .option.correct {
+        border-color: rgba(34, 197, 94, 1);
+        background: rgba(34, 197, 94, 0.3);
+    }
+    
+    .option.incorrect {
+        border-color: rgba(239, 68, 68, 1);
+        background: rgba(239, 68, 68, 0.3);
+    }
+    
+    .action-btn, .nav-btn, .back-btn, .next-btn {
+        border-width: 2px;
+        border-color: rgba(255, 255, 255, 0.8);
+        font-weight: 700;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .floating-shape {
+        animation: none;
+    }
+    
+    .loading-spinner {
+        animation: none;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid white;
+    }
+}
+
+/* Print styles */
+@media print {
+    .background-animation, .loading-screen, .floating-shape {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .page {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .language-card, .option, .stats-card, .results-card, .question-card {
+        background: white !important;
+        border: 2px solid black !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+}
